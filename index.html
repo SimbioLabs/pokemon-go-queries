@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pokémon GO — search queries</title>
+  <meta name="description" content="Queries de busca do Pokémon GO (Simbio Labs) — copiar e colar no jogo." />
+  <meta name="theme-color" content="#1a1525" />
+  <style>
+    :root {
+      --bg: #1a1525;
+      --elev: #2a1f3d;
+      --text: #f5f0f8;
+      --muted: #b8b8b0;
+      --accent: #e5c589;
+      --line: rgba(245, 240, 248, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(120% 70% at 50% -10%, #3a2a55 0%, var(--bg) 55%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem 3.5rem; }
+    header { margin-bottom: 1.75rem; }
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--accent);
+    }
+    header p { color: var(--muted); margin-top: 0.4rem; font-size: 0.95rem; }
+    .card {
+      background: var(--elev);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      padding: 1.25rem 1.15rem 1.1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.28);
+    }
+    .card h2 { font-size: 1.15rem; margin-bottom: 0.35rem; }
+    .blurb { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.85rem; }
+    textarea {
+      width: 100%;
+      min-height: 5.5rem;
+      resize: vertical;
+      padding: 0.75rem 0.85rem;
+      border-radius: 0.65rem;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.28);
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+    .copy {
+      margin-top: 0.75rem;
+      border: 0;
+      border-radius: 0.65rem;
+      padding: 0.7rem 1.15rem;
+      background: var(--accent);
+      color: #1a1525;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    .copy:active { transform: scale(0.98); }
+    .status { min-height: 1.2rem; margin-top: 0.5rem; font-size: 0.85rem; color: var(--accent); }
+    footer { margin-top: 1.5rem; color: var(--muted); font-size: 0.8rem; }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Pokémon GO — queries</h1>
+      <p>Copie e cole na busca do inventário. Mantido pela Simbio Labs.</p>
+    </header>
+    
+      <section class="card" id="specials">
+        <h2>Tag specials</h2>
+        <p class="blurb">Shiny, lucky, legendary, mythical, shadow, costume ou background — e ainda não estão com a tag special. Passa antes de deletar.</p>
+        <textarea readonly rows="4" data-query>shiny,lucky,legendary,mythical,shadow,costume,background&amp;!#special</textarea>
+        <button type="button" class="copy" data-copy>Copiar</button>
+        <p class="status" aria-live="polite"></p>
+      </section>
+      <section class="card" id="bulk-iv">
+        <h2>House bulk IVs</h2>
+        <p class="blurb">Filtro base de IV da casa (ataque baixo, defesa/HP médios-altos).</p>
+        <textarea readonly rows="4" data-query>0-1attack&amp;2-4defense&amp;2-4hp</textarea>
+        <button type="button" class="copy" data-copy>Copiar</button>
+        <p class="status" aria-live="polite"></p>
+      </section>
+      <section class="card" id="bulk-keep">
+        <h2>GL+UL useful bulk</h2>
+        <p class="blurb">House bulk + espécies úteis de Great/Ultra. Tag #pvp. Resync Twilight Trails 2026-09-19.</p>
+        <textarea readonly rows="4" data-query>0-1attack&amp;2-4defense&amp;2-4hp&amp;+lickitung,+tinkatink,+swablu,+piplup,mimikyu,+wooper,+frillish,+dewpider,+pineco,+vulpix,cramorant,+totodile,+corsola,+hoppip,+rookidee,+spearow,+horsea,+azurill,guzzlord,+sentret,lapras,+dratini,sableye,+palpitoad,umbreon,+meditite,+fletchling,+lechonk,+bagon,+spheal,+spoink,+nickit,+bunnelby,+duskull,+lileep,+flabebe,moltres,+squirtle,+cleffa,+mantyke,+vullaby,+seel,+inkay,+onix,+grubbin,+skorupi,+shellos,+honedge,+cubone,+mudkip,stunfisk,+deino,registeel,+dunsparce,+meltan,morpeko,turtonator,oranguru,+goldeen,dondozo,+pumpkaboo,+feebas,+poliwag,+oshawott,virizion,+mankey,zygarde,regidrago,giratina,cresselia,+tadbulb,+yamask,+mareep,+togepi,+hippopotas,+spritzee,+wimpod,+magikarp,orthworm,+pikipek,+popplio,cobalion,+tentacool,+fuecoco,snorlax,+slakoth,deoxys,+voltorb,carbink,+tarountula,+grookey,+grimer,miltank,bombirdier,articuno,+swinub,genesect,raikou,zapdos,pachirisu</textarea>
+        <button type="button" class="copy" data-copy>Copiar</button>
+        <p class="status" aria-live="polite"></p>
+      </section>
+      <section class="card" id="count-dupes">
+        <h2>3★/4★ de dex duplicado</h2>
+        <p class="blurb">3★ ou 4★ de um número de dex que você tem 2+ no box. Ordena por Number.</p>
+        <textarea readonly rows="4" data-query>3*,4*&amp;count2-</textarea>
+        <button type="button" class="copy" data-copy>Copiar</button>
+        <p class="status" aria-live="polite"></p>
+      </section>
+    <footer>
+      <p>Fonte: house search queries · <a href="https://github.com/SimbioLabs/pokemon-go-queries">GitHub</a></p>
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll("[data-copy]").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const card = btn.closest(".card");
+        const area = card.querySelector("textarea");
+        const status = card.querySelector(".status");
+        const text = area.value;
+        try {
+          await navigator.clipboard.writeText(text);
+          status.textContent = "Copiado.";
+        } catch (e) {
+          area.focus();
+          area.select();
+          try {
+            document.execCommand("copy");
+            status.textContent = "Copiado.";
+          } catch (e2) {
+            status.textContent = "Selecione o texto e copie (Cmd/Ctrl+C).";
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
