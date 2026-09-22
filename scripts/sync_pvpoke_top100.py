@@ -2,13 +2,15 @@
 """Fetch PvPoke overall top 100 for Great (1500) and Ultra (2500) leagues.
 
 Also computes true rank-1 IVs (best stat product under the CP cap) from
-PvPoke gamemaster baseStats + official CP multipliers.
+PvPoke gamemaster baseStats + official CP multipliers, and rebuilds the
+GL+UL useful bulk search query in index.html.
 """
 
 from __future__ import annotations
 
 import json
 import math
+import re
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -57,7 +59,6 @@ SOURCES = {
             "https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/rankings/all/overall/rankings-1500.json",
         ],
         "rankings_page": "https://pvpoke.com/rankings/all/1500/overall/",
-        "iv_key": "cp1500",
     },
     "ul": {
         "cp": 2500,
@@ -67,7 +68,6 @@ SOURCES = {
             "https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/rankings/all/overall/rankings-2500.json",
         ],
         "rankings_page": "https://pvpoke.com/rankings/all/2500/overall/",
-        "iv_key": "cp2500",
     },
 }
 
@@ -78,6 +78,49 @@ GAMEMASTER_URLS = [
 
 UA = "SimbioLabs-pokemon-go-queries/1.1 (+https://github.com/SimbioLabs/pokemon-go-queries)"
 LEVEL_CAP = 50.0
+HOUSE_IV = "0-1attack&2-4defense&2-4hp"
+
+FORM_SUFFIXES = (
+    "_galarian",
+    "_alolan",
+    "_hisuian",
+    "_average",
+    "_large",
+    "_super",
+    "_small",
+    "_female",
+    "_male",
+    "_full_belly",
+    "_hangry",
+    "_shield",
+    "_blade",
+    "_altered",
+    "_origin",
+    "_defense",
+    "_attack",
+    "_speed",
+    "_complete",
+    "_10",
+    "_50",
+    "_shock",
+    "_burn",
+    "_chill",
+    "_douse",
+    "_busted",
+    "_disguised",
+    "_therian",
+    "_incarnate",
+)
+
+# GO search tokens when gamemaster family/form data is awkward
+TOKEN_OVERRIDES = {
+    "corsola_galarian": "+corsola",
+    "moltres_galarian": "moltres",
+    "articuno_galarian": "articuno",
+    "zapdos_galarian": "zapdos",
+    "wooper_paldean": "+wooper",
+    "clodsire": "+wooper",
+}
 
 
 def fetch_json(urls: list[str]):
@@ -167,19 +210,120 @@ def moves_label(entry: dict) -> str:
     return " / ".join(out) if out else "—"
 
 
+def strip_shadow(species_id: str) -> str:
+    return species_id[:-7] if species_id.endswith("_shadow") else species_id
+
+
+def peel_forms(species_id: str) -> str:
+    sid = strip_shadow(species_id)
+    changed = True
+    while changed:
+        changed = False
+        for suf in FORM_SUFFIXES:
+            if sid.endswith(suf):
+                sid = sid[: -len(suf)]
+                changed = True
+                break
+    return sid
+
+
 def resolve_species(gm_by_id: dict, species_id: str) -> dict | None:
+    if not species_id:
+        return None
     if species_id in gm_by_id:
         return gm_by_id[species_id]
-    # rankings sometimes use forms not in min set; try stripping suffixes
-    for suffix in ("_shadow", "_busted", "_disguised"):
-        if species_id.endswith(suffix):
-            base = species_id[: -len(suffix)]
-            # shadow keeps own entry usually; busted may map to mimikyu
-            if species_id in gm_by_id:
-                return gm_by_id[species_id]
-            if base in gm_by_id:
-                return gm_by_id[base]
+    sid = strip_shadow(species_id)
+    if sid in gm_by_id:
+        return gm_by_id[sid]
+    cur = sid
+    while True:
+        hit = False
+        for suf in FORM_SUFFIXES:
+            if cur.endswith(suf):
+                cur = cur[: -len(suf)]
+                hit = True
+                if cur in gm_by_id:
+                    return gm_by_id[cur]
+                break
+        if not hit:
+            return gm_by_id.get(cur)
+
+
+def find_evo_parent(gm_by_id: dict, species_id: str) -> str | None:
+    """Find a species that lists this id (or peeled form) as an evolution."""
+    target = strip_shadow(species_id)
+    peeled = peel_forms(target)
+    for other in gm_by_id.values():
+        evos = (other.get("family") or {}).get("evolutions") or []
+        for evo in evos:
+            if evo == target or peel_forms(evo) == peeled:
+                return other["speciesId"]
     return None
+
+
+def family_root(gm_by_id: dict, species_id: str) -> str | None:
+    sid = strip_shadow(species_id)
+    seen: set[str] = set()
+    while sid and sid not in seen:
+        seen.add(sid)
+        entry = gm_by_id.get(sid)
+        if not entry:
+            peeled = peel_forms(sid)
+            if peeled != sid and peeled in gm_by_id:
+                sid = peeled
+                continue
+            parent = find_evo_parent(gm_by_id, sid)
+            if parent:
+                sid = parent
+                continue
+            return None
+        parent = (entry.get("family") or {}).get("parent")
+        if parent:
+            sid = parent
+            continue
+        # Entry exists but family/parent missing (e.g. gastrodon)
+        via = find_evo_parent(gm_by_id, sid)
+        if via:
+            sid = via
+            continue
+        return sid
+    return None
+
+
+def family_id_of(gm_by_id: dict, species_id: str) -> str | None:
+    entry = gm_by_id.get(species_id)
+    if not entry:
+        return None
+    return (entry.get("family") or {}).get("id")
+
+
+def should_plus(gm_by_id: dict, root_id: str) -> bool:
+    fid = family_id_of(gm_by_id, root_id)
+    if fid == "FAMILY_EEVEE":
+        return False
+    entry = gm_by_id.get(root_id)
+    if entry and (entry.get("family") or {}).get("evolutions"):
+        return True
+    if fid:
+        for other in gm_by_id.values():
+            fam = other.get("family") or {}
+            if fam.get("id") == fid and fam.get("evolutions"):
+                return True
+    return False
+
+
+def search_token(gm_by_id: dict, ranking_sid: str) -> str:
+    raw = strip_shadow(ranking_sid)
+    if raw in TOKEN_OVERRIDES:
+        return TOKEN_OVERRIDES[raw]
+    root = family_root(gm_by_id, ranking_sid)
+    if root and family_id_of(gm_by_id, root) == "FAMILY_EEVEE":
+        # Never +eevee — keep the ranked evo (umbreon, etc.)
+        return peel_forms(ranking_sid)
+    if root:
+        name = peel_forms(root)
+        return f"+{name}" if should_plus(gm_by_id, root) else name
+    return peel_forms(ranking_sid)
 
 
 def top100(entries: list[dict], gm_by_id: dict, league_cp: int) -> list[dict]:
@@ -243,9 +387,111 @@ def write_json(league_key: str, meta: dict, rows: list[dict], fetched_at: str) -
         "fetchedAt": fetched_at,
         "count": len(rows),
         "r1Note": "Stat-product rank-1 IV at level cap 50 under league CP; from gamemaster baseStats.",
-        "rankings": [{k: v for k, v in r.items() if k != "key"} for r in rows],
+        "rankings": rows,
     }
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return path
+
+
+def build_bulk_keep(gm_by_id: dict, league_rows: dict[str, list[dict]]) -> tuple[str, list[str], list[dict]]:
+    """House IV filter + unique family search tokens from GL∪UL top 100."""
+    best: dict[str, dict] = {}
+    for league, rows in league_rows.items():
+        for r in rows:
+            sid = r["speciesId"]
+            score = r.get("score") or 0
+            prev = best.get(sid)
+            if not prev or score > prev["score"]:
+                best[sid] = {
+                    "speciesId": sid,
+                    "speciesName": r.get("speciesName"),
+                    "score": score,
+                    "league": league,
+                    "token": search_token(gm_by_id, sid),
+                }
+
+    ordered = sorted(best.values(), key=lambda x: (-x["score"], x["speciesId"]))
+    tokens: list[str] = []
+    seen: set[str] = set()
+    mapping: list[dict] = []
+    for row in ordered:
+        tok = row["token"]
+        if "_" in tok.lstrip("+"):
+            raise RuntimeError(f"Bad GO search token with underscore: {tok} from {row['speciesId']}")
+        mapping.append(
+            {
+                "speciesId": row["speciesId"],
+                "speciesName": row["speciesName"],
+                "score": row["score"],
+                "league": row["league"],
+                "token": tok,
+            }
+        )
+        if tok not in seen:
+            seen.add(tok)
+            tokens.append(tok)
+
+    query = f"{HOUSE_IV}&{','.join(tokens)}"
+    return query, tokens, mapping
+
+
+def write_bulk_keep(query: str, tokens: list[str], mapping: list[dict], fetched_at: str) -> Path:
+    DATA.mkdir(parents=True, exist_ok=True)
+    path = DATA / "bulk-keep.json"
+    payload = {
+        "fetchedAt": fetched_at,
+        "houseIv": HOUSE_IV,
+        "tokenCount": len(tokens),
+        "query": query,
+        "tokens": tokens,
+        "mapping": mapping,
+        "notes": [
+            "House bulk IVs AND (top100 GL or UL family tokens).",
+            "Never +eevee (ranked eeveelutions stay exact, e.g. umbreon).",
+            "+species matches that species and its evolutions in Pokémon GO search.",
+        ],
+    }
+    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return path
+
+
+def update_index_bulk_keep(query: str, fetched_at: str) -> Path:
+    path = ROOT / "index.html"
+    html = path.read_text(encoding="utf-8")
+    esc = query.replace("&", "&amp;")
+    blurb = (
+        f"House bulk + espécies do top 100 Great/Ultra (PvPoke). "
+        f"Tag #pvp. Auto-sync {fetched_at} UTC."
+    )
+
+    def repl_card(match: re.Match[str]) -> str:
+        card = match.group(0)
+        card = re.sub(
+            r'(<p class="blurb">).*?(</p>)',
+            lambda m: m.group(1) + blurb + m.group(2),
+            card,
+            count=1,
+            flags=re.S,
+        )
+        card = re.sub(
+            r"(data-query>)(.*?)(</textarea>)",
+            lambda m: m.group(1) + esc + m.group(3),
+            card,
+            count=1,
+            flags=re.S,
+        )
+        return card
+
+    new_html, n = re.subn(
+        r'<section class="card" id="bulk-keep">.*?</section>',
+        repl_card,
+        html,
+        count=1,
+        flags=re.S,
+    )
+    if n != 1:
+        raise RuntimeError("Could not find #bulk-keep card in index.html")
+    path.write_text(new_html, encoding="utf-8")
     return path
 
 
@@ -255,13 +501,20 @@ def main() -> None:
     gm_by_id = {p["speciesId"]: p for p in gm.get("pokemon", [])}
     print(f"gamemaster species: {len(gm_by_id)}")
 
+    league_rows: dict[str, list[dict]] = {}
     for key, meta in SOURCES.items():
         entries = fetch_json(meta["urls"])
         rows = top100(entries, gm_by_id, meta["cp"])
+        league_rows[key] = rows
         missing = sum(1 for r in rows if not r.get("r1Iv"))
         md = write_markdown(key, meta, rows, fetched_at)
         js = write_json(key, meta, rows, fetched_at)
         print(f"{key}: wrote {md.name} / {js.name} ({len(rows)} rows, {missing} missing R1)")
+
+    query, tokens, mapping = build_bulk_keep(gm_by_id, league_rows)
+    bk = write_bulk_keep(query, tokens, mapping, fetched_at)
+    idx = update_index_bulk_keep(query, fetched_at)
+    print(f"bulk-keep: {len(tokens)} tokens → {bk.name} + {idx.name}")
 
 
 if __name__ == "__main__":
