@@ -2,708 +2,1009 @@
   "league": "Ultra League",
   "cp": 2500,
   "source": "https://pvpoke.com/rankings/all/2500/overall/",
-  "fetchedAt": "2026-09-22 03:02",
+  "fetchedAt": "2026-09-22 03:17",
   "count": 100,
+  "r1Note": "Stat-product rank-1 IV at level cap 50 under league CP; from gamemaster baseStats.",
   "rankings": [
     {
       "rank": 1,
       "speciesId": "tinkaton",
       "speciesName": "Tinkaton",
       "score": 94.4,
-      "moves": "Fairy Wind / Gigaton Hammer / Bulldoze"
+      "moves": "Fairy Wind / Gigaton Hammer / Bulldoze",
+      "r1Iv": "13/15/15",
+      "r1Level": 49.5,
+      "r1Cp": 2499
     },
     {
       "rank": 2,
       "speciesId": "corviknight",
       "speciesName": "Corviknight",
       "score": 94,
-      "moves": "Sand Attack / Air Cutter / Iron Head"
+      "moves": "Sand Attack / Air Cutter / Iron Head",
+      "r1Iv": "0/15/15",
+      "r1Level": 48.5,
+      "r1Cp": 2498
     },
     {
       "rank": 3,
       "speciesId": "snorlax_shadow",
       "speciesName": "Snorlax (Shadow)",
       "score": 93.7,
-      "moves": "Psywave / Body Slam / Earthquake"
+      "moves": "Psywave / Body Slam / Earthquake",
+      "r1Iv": "0/12/15",
+      "r1Level": 29.5,
+      "r1Cp": 2499
     },
     {
       "rank": 4,
       "speciesId": "corviknight_shadow",
       "speciesName": "Corviknight (Shadow)",
       "score": 93.4,
-      "moves": "Sand Attack / Air Cutter / Payback"
+      "moves": "Sand Attack / Air Cutter / Payback",
+      "r1Iv": "0/15/15",
+      "r1Level": 48.5,
+      "r1Cp": 2498
     },
     {
       "rank": 5,
       "speciesId": "melmetal",
       "speciesName": "Melmetal",
       "score": 92.7,
-      "moves": "Thunder Shock / Double Iron Bash / Dynamic Punch"
+      "moves": "Thunder Shock / Double Iron Bash / Dynamic Punch",
+      "r1Iv": "0/13/15",
+      "r1Level": 26.0,
+      "r1Cp": 2495
     },
     {
       "rank": 6,
       "speciesId": "virizion",
       "speciesName": "Virizion",
       "score": 92.3,
-      "moves": "Double Kick / Leaf Blade / Sacred Sword"
+      "moves": "Double Kick / Leaf Blade / Sacred Sword",
+      "r1Iv": "0/14/15",
+      "r1Level": 32.5,
+      "r1Cp": 2498
     },
     {
       "rank": 7,
       "speciesId": "zygarde_complete",
       "speciesName": "Zygarde (Complete Forme)",
       "score": 92.2,
-      "moves": "Dragon Tail / Crunch / Bulldoze"
+      "moves": "Dragon Tail / Crunch / Bulldoze",
+      "r1Iv": "0/15/12",
+      "r1Level": 25.5,
+      "r1Cp": 2498
     },
     {
       "rank": 8,
       "speciesId": "empoleon",
       "speciesName": "Empoleon",
       "score": 92.1,
-      "moves": "Metal Sound / Hydro Cannon / Drill Peck"
+      "moves": "Metal Sound / Hydro Cannon / Drill Peck",
+      "r1Iv": "1/15/14",
+      "r1Level": 34.5,
+      "r1Cp": 2500
     },
     {
       "rank": 9,
       "speciesId": "empoleon_shadow",
       "speciesName": "Empoleon (Shadow)",
       "score": 92.1,
-      "moves": "Metal Sound / Hydro Cannon / Drill Peck"
+      "moves": "Metal Sound / Hydro Cannon / Drill Peck",
+      "r1Iv": "1/15/14",
+      "r1Level": 34.5,
+      "r1Cp": 2500
     },
     {
       "rank": 10,
       "speciesId": "mimikyu",
       "speciesName": "Mimikyu (Busted)",
       "score": 92.1,
-      "moves": "Shadow Claw / Shadow Sneak / Play Rough"
+      "moves": "Shadow Claw / Shadow Sneak / Play Rough",
+      "r1Iv": "14/14/15",
+      "r1Level": 50.0,
+      "r1Cp": 2497
     },
     {
       "rank": 11,
       "speciesId": "snorlax",
       "speciesName": "Snorlax",
       "score": 92.1,
-      "moves": "Psywave / Body Slam / Earthquake"
+      "moves": "Psywave / Body Slam / Earthquake",
+      "r1Iv": "0/12/15",
+      "r1Level": 29.5,
+      "r1Cp": 2499
     },
     {
       "rank": 12,
       "speciesId": "florges",
       "speciesName": "Florges",
       "score": 92,
-      "moves": "Fairy Wind / Chilling Water / Disarming Voice"
+      "moves": "Fairy Wind / Chilling Water / Disarming Voice",
+      "r1Iv": "0/14/15",
+      "r1Level": 29.0,
+      "r1Cp": 2498
     },
     {
       "rank": 13,
       "speciesId": "moltres_galarian",
       "speciesName": "Moltres (Galarian)",
       "score": 91.9,
-      "moves": "Sucker Punch / Fly / Brave Bird"
+      "moves": "Sucker Punch / Fly / Brave Bird",
+      "r1Iv": "1/15/15",
+      "r1Level": 29.5,
+      "r1Cp": 2497
     },
     {
       "rank": 14,
       "speciesId": "feraligatr_shadow",
       "speciesName": "Feraligatr (Shadow)",
       "score": 91.7,
-      "moves": "Shadow Claw / Hydro Cannon / Ice Beam"
+      "moves": "Shadow Claw / Hydro Cannon / Ice Beam",
+      "r1Iv": "1/15/14",
+      "r1Level": 35.5,
+      "r1Cp": 2497
     },
     {
       "rank": 15,
       "speciesId": "feraligatr",
       "speciesName": "Feraligatr",
       "score": 91.5,
-      "moves": "Shadow Claw / Hydro Cannon / Ice Beam"
+      "moves": "Shadow Claw / Hydro Cannon / Ice Beam",
+      "r1Iv": "1/15/14",
+      "r1Level": 35.5,
+      "r1Cp": 2497
     },
     {
       "rank": 16,
       "speciesId": "jellicent",
       "speciesName": "Jellicent",
       "score": 91.2,
-      "moves": "Hex / Surf / Shadow Ball"
+      "moves": "Hex / Surf / Shadow Ball",
+      "r1Iv": "6/14/15",
+      "r1Level": 50.0,
+      "r1Cp": 2500
     },
     {
       "rank": 17,
       "speciesId": "giratina_altered",
       "speciesName": "Giratina (Altered)",
       "score": 91,
-      "moves": "Dragon Breath / Ancient Power / Shadow Force"
+      "moves": "Dragon Breath / Ancient Power / Shadow Force",
+      "r1Iv": "0/14/15",
+      "r1Level": 28.0,
+      "r1Cp": 2497
     },
     {
       "rank": 18,
       "speciesId": "cramorant",
       "speciesName": "Cramorant",
       "score": 90.9,
-      "moves": "Peck / Dive / Fly"
+      "moves": "Peck / Dive / Fly",
+      "r1Iv": "15/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2421
     },
     {
       "rank": 19,
       "speciesId": "guzzlord",
       "speciesName": "Guzzlord",
       "score": 90.9,
-      "moves": "Dragon Tail / Brutal Swing / Sludge Bomb"
+      "moves": "Dragon Tail / Brutal Swing / Sludge Bomb",
+      "r1Iv": "0/15/14",
+      "r1Level": 35.5,
+      "r1Cp": 2499
     },
     {
       "rank": 20,
       "speciesId": "skeledirge",
       "speciesName": "Skeledirge",
       "score": 90.7,
-      "moves": "Incinerate / Torch Song / Shadow Ball"
+      "moves": "Incinerate / Torch Song / Shadow Ball",
+      "r1Iv": "0/15/15",
+      "r1Level": 32.0,
+      "r1Cp": 2500
     },
     {
       "rank": 21,
       "speciesId": "rillaboom",
       "speciesName": "Rillaboom",
       "score": 90.6,
-      "moves": "Scratch / Drum Beating / Earth Power"
+      "moves": "Scratch / Drum Beating / Earth Power",
+      "r1Iv": "0/14/15",
+      "r1Level": 28.0,
+      "r1Cp": 2495
     },
     {
       "rank": 22,
       "speciesId": "lapras",
       "speciesName": "Lapras",
       "score": 90.5,
-      "moves": "Psywave / Sparkling Aria / Ice Beam"
+      "moves": "Psywave / Sparkling Aria / Ice Beam",
+      "r1Iv": "0/15/15",
+      "r1Level": 42.5,
+      "r1Cp": 2498
     },
     {
       "rank": 23,
       "speciesId": "lapras_shadow",
       "speciesName": "Lapras (Shadow)",
       "score": 90.5,
-      "moves": "Psywave / Sparkling Aria / Ice Beam"
+      "moves": "Psywave / Sparkling Aria / Ice Beam",
+      "r1Iv": "0/15/15",
+      "r1Level": 42.5,
+      "r1Cp": 2498
     },
     {
       "rank": 24,
       "speciesId": "dusknoir",
       "speciesName": "Dusknoir",
       "score": 90.3,
-      "moves": "Astonish / Dynamic Punch / Shadow Punch"
+      "moves": "Astonish / Dynamic Punch / Shadow Punch",
+      "r1Iv": "0/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2492
     },
     {
       "rank": 25,
       "speciesId": "ninetales_alolan",
       "speciesName": "Ninetales (Alolan)",
       "score": 90.3,
-      "moves": "Powder Snow / Weather Ball Ice / Chilling Water"
+      "moves": "Powder Snow / Weather Ball Ice / Chilling Water",
+      "r1Iv": "7/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2497
     },
     {
       "rank": 26,
       "speciesId": "dondozo",
       "speciesName": "Dondozo",
       "score": 90.2,
-      "moves": "Waterfall / Surf / Outrage"
+      "moves": "Waterfall / Surf / Outrage",
+      "r1Iv": "0/14/15",
+      "r1Level": 33.5,
+      "r1Cp": 2498
     },
     {
       "rank": 27,
       "speciesId": "dusknoir_shadow",
       "speciesName": "Dusknoir (Shadow)",
       "score": 90.2,
-      "moves": "Astonish / Dynamic Punch / Shadow Punch"
+      "moves": "Astonish / Dynamic Punch / Shadow Punch",
+      "r1Iv": "0/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2492
     },
     {
       "rank": 28,
       "speciesId": "registeel",
       "speciesName": "Registeel",
       "score": 90.2,
-      "moves": "Lock On / Flash Cannon / Focus Blast"
+      "moves": "Lock On / Flash Cannon / Focus Blast",
+      "r1Iv": "0/14/15",
+      "r1Level": 50.0,
+      "r1Cp": 2499
     },
     {
       "rank": 29,
       "speciesId": "blastoise",
       "speciesName": "Blastoise",
       "score": 90,
-      "moves": "Bite / Hydro Cannon / Skull Bash"
+      "moves": "Bite / Hydro Cannon / Skull Bash",
+      "r1Iv": "0/12/15",
+      "r1Level": 48.5,
+      "r1Cp": 2500
     },
     {
       "rank": 30,
       "speciesId": "ninetales_alolan_shadow",
       "speciesName": "Ninetales (Alolan) (Shadow)",
       "score": 90,
-      "moves": "Powder Snow / Weather Ball Ice / Chilling Water"
+      "moves": "Powder Snow / Weather Ball Ice / Chilling Water",
+      "r1Iv": "7/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2497
     },
     {
       "rank": 31,
       "speciesId": "forretress",
       "speciesName": "Forretress",
       "score": 89.9,
-      "moves": "Volt Switch / Rock Tomb / Sand Tomb"
+      "moves": "Volt Switch / Rock Tomb / Sand Tomb",
+      "r1Iv": "9/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2492
     },
     {
       "rank": 32,
       "speciesId": "giratina_altered_shadow",
       "speciesName": "Giratina (Altered) (Shadow)",
       "score": 89.9,
-      "moves": "Dragon Breath / Ancient Power / Shadow Sneak"
+      "moves": "Dragon Breath / Ancient Power / Shadow Sneak",
+      "r1Iv": "0/14/15",
+      "r1Level": 28.0,
+      "r1Cp": 2497
     },
     {
       "rank": 33,
       "speciesId": "regidrago",
       "speciesName": "Regidrago",
       "score": 89.8,
-      "moves": "Dragon Breath / Dragon Energy / Vice Grip"
+      "moves": "Dragon Breath / Dragon Energy / Vice Grip",
+      "r1Iv": "0/14/15",
+      "r1Level": 33.5,
+      "r1Cp": 2500
     },
     {
       "rank": 34,
       "speciesId": "ninetales",
       "speciesName": "Ninetales",
       "score": 89.5,
-      "moves": "Ember / Weather Ball Fire / Energy Ball"
+      "moves": "Ember / Weather Ball Fire / Energy Ball",
+      "r1Iv": "9/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2493
     },
     {
       "rank": 35,
       "speciesId": "cresselia",
       "speciesName": "Cresselia",
       "score": 89.4,
-      "moves": "Psycho Cut / Grass Knot / Moonblast"
+      "moves": "Psycho Cut / Grass Knot / Moonblast",
+      "r1Iv": "0/13/15",
+      "r1Level": 37.5,
+      "r1Cp": 2499
     },
     {
       "rank": 36,
       "speciesId": "muk_alolan",
       "speciesName": "Muk (Alolan)",
       "score": 89.4,
-      "moves": "Poison Jab / Brutal Swing / Ice Punch"
+      "moves": "Poison Jab / Brutal Swing / Ice Punch",
+      "r1Iv": "0/15/14",
+      "r1Level": 38.5,
+      "r1Cp": 2495
     },
     {
       "rank": 37,
       "speciesId": "clefable",
       "speciesName": "Clefable",
       "score": 89.2,
-      "moves": "Fairy Wind / Meteor Mash / Draining Kiss"
+      "moves": "Fairy Wind / Meteor Mash / Draining Kiss",
+      "r1Iv": "0/15/13",
+      "r1Level": 49.0,
+      "r1Cp": 2500
     },
     {
       "rank": 38,
       "speciesId": "talonflame",
       "speciesName": "Talonflame",
       "score": 89.2,
-      "moves": "Incinerate / Fly / Brave Bird"
+      "moves": "Incinerate / Fly / Brave Bird",
+      "r1Iv": "15/15/14",
+      "r1Level": 50.0,
+      "r1Cp": 2486
     },
     {
       "rank": 39,
       "speciesId": "forretress_shadow",
       "speciesName": "Forretress (Shadow)",
       "score": 89.1,
-      "moves": "Volt Switch / Rock Tomb / Sand Tomb"
+      "moves": "Volt Switch / Rock Tomb / Sand Tomb",
+      "r1Iv": "9/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2492
     },
     {
       "rank": 40,
       "speciesId": "walrein",
       "speciesName": "Walrein",
       "score": 89.1,
-      "moves": "Powder Snow / Icicle Spear / Earthquake"
+      "moves": "Powder Snow / Icicle Spear / Earthquake",
+      "r1Iv": "0/15/15",
+      "r1Level": 39.5,
+      "r1Cp": 2500
     },
     {
       "rank": 41,
       "speciesId": "walrein_shadow",
       "speciesName": "Walrein (Shadow)",
       "score": 89.1,
-      "moves": "Powder Snow / Icicle Spear / Earthquake"
+      "moves": "Powder Snow / Icicle Spear / Earthquake",
+      "r1Iv": "0/15/15",
+      "r1Level": 39.5,
+      "r1Cp": 2500
     },
     {
       "rank": 42,
       "speciesId": "deoxys_defense",
       "speciesName": "Deoxys (Defense)",
       "score": 89,
-      "moves": "Low Kick / Psycho Boost / Thunderbolt"
+      "moves": "Low Kick / Psycho Boost / Thunderbolt",
+      "r1Iv": "12/13/15",
+      "r1Level": 49.5,
+      "r1Cp": 2500
     },
     {
       "rank": 43,
       "speciesId": "runerigus",
       "speciesName": "Runerigus",
       "score": 89,
-      "moves": "Shadow Claw / Rock Tomb / Shadow Ball"
+      "moves": "Shadow Claw / Rock Tomb / Shadow Ball",
+      "r1Iv": "10/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2498
     },
     {
       "rank": 44,
       "speciesId": "steelix",
       "speciesName": "Steelix",
       "score": 89,
-      "moves": "Thunder Fang / Psychic Fangs / Earthquake"
+      "moves": "Thunder Fang / Psychic Fangs / Earthquake",
+      "r1Iv": "2/15/15",
+      "r1Level": 49.5,
+      "r1Cp": 2497
     },
     {
       "rank": 45,
       "speciesId": "seaking",
       "speciesName": "Seaking",
       "score": 88.9,
-      "moves": "Peck / Drill Run / Icy Wind"
+      "moves": "Peck / Drill Run / Icy Wind",
+      "r1Iv": "15/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2444
     },
     {
       "rank": 46,
       "speciesId": "cresselia_shadow",
       "speciesName": "Cresselia (Shadow)",
       "score": 88.7,
-      "moves": "Psycho Cut / Grass Knot / Moonblast"
+      "moves": "Psycho Cut / Grass Knot / Moonblast",
+      "r1Iv": "0/13/15",
+      "r1Level": 37.5,
+      "r1Cp": 2499
     },
     {
       "rank": 47,
       "speciesId": "steelix_shadow",
       "speciesName": "Steelix (Shadow)",
       "score": 88.7,
-      "moves": "Thunder Fang / Psychic Fangs / Crunch"
+      "moves": "Thunder Fang / Psychic Fangs / Crunch",
+      "r1Iv": "2/15/15",
+      "r1Level": 49.5,
+      "r1Cp": 2497
     },
     {
       "rank": 48,
       "speciesId": "swampert",
       "speciesName": "Swampert",
       "score": 88.7,
-      "moves": "Mud Shot / Hydro Cannon / Earthquake"
+      "moves": "Mud Shot / Hydro Cannon / Earthquake",
+      "r1Iv": "0/14/13",
+      "r1Level": 33.5,
+      "r1Cp": 2499
     },
     {
       "rank": 49,
       "speciesId": "toucannon",
       "speciesName": "Toucannon",
       "score": 88.7,
-      "moves": "Peck / Beak Blast / Drill Peck"
+      "moves": "Peck / Beak Blast / Drill Peck",
+      "r1Iv": "2/15/14",
+      "r1Level": 39.0,
+      "r1Cp": 2499
     },
     {
       "rank": 50,
       "speciesId": "milotic_shadow",
       "speciesName": "Milotic (Shadow)",
       "score": 88.6,
-      "moves": "Waterfall / Aqua Tail / Wrap"
+      "moves": "Waterfall / Aqua Tail / Wrap",
+      "r1Iv": "0/13/15",
+      "r1Level": 33.0,
+      "r1Cp": 2498
     },
     {
       "rank": 51,
       "speciesId": "primarina",
       "speciesName": "Primarina",
       "score": 88.6,
-      "moves": "Waterfall / Hydro Cannon / Moonblast"
+      "moves": "Waterfall / Hydro Cannon / Moonblast",
+      "r1Iv": "2/15/13",
+      "r1Level": 29.0,
+      "r1Cp": 2500
     },
     {
       "rank": 52,
       "speciesId": "ampharos",
       "speciesName": "Ampharos",
       "score": 88.5,
-      "moves": "Volt Switch / Brutal Swing / Trailblaze"
+      "moves": "Volt Switch / Brutal Swing / Trailblaze",
+      "r1Iv": "0/13/15",
+      "r1Level": 36.0,
+      "r1Cp": 2497
     },
     {
       "rank": 53,
       "speciesId": "cradily_shadow",
       "speciesName": "Cradily (Shadow)",
       "score": 88.5,
-      "moves": "Acid / Rock Tomb / Grass Knot"
+      "moves": "Acid / Rock Tomb / Grass Knot",
+      "r1Iv": "15/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2499
     },
     {
       "rank": 54,
       "speciesId": "malamar_shadow",
       "speciesName": "Malamar (Shadow)",
       "score": 88.5,
-      "moves": "Psywave / Foul Play / Super Power"
+      "moves": "Psywave / Foul Play / Super Power",
+      "r1Iv": "3/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2500
     },
     {
       "rank": 55,
       "speciesId": "ampharos_shadow",
       "speciesName": "Ampharos (Shadow)",
       "score": 88.4,
-      "moves": "Volt Switch / Brutal Swing / Trailblaze"
+      "moves": "Volt Switch / Brutal Swing / Trailblaze",
+      "r1Iv": "0/13/15",
+      "r1Level": 36.0,
+      "r1Cp": 2497
     },
     {
       "rank": 56,
       "speciesId": "talonflame_shadow",
       "speciesName": "Talonflame (Shadow)",
       "score": 88.4,
-      "moves": "Incinerate / Fly / Brave Bird"
+      "moves": "Incinerate / Fly / Brave Bird",
+      "r1Iv": "15/15/14",
+      "r1Level": 50.0,
+      "r1Cp": 2486
     },
     {
       "rank": 57,
       "speciesId": "bellibolt",
       "speciesName": "Bellibolt",
       "score": 88.3,
-      "moves": "Sucker Punch / Parabolic Charge / Zap Cannon"
+      "moves": "Sucker Punch / Parabolic Charge / Zap Cannon",
+      "r1Iv": "0/15/10",
+      "r1Level": 42.0,
+      "r1Cp": 2499
     },
     {
       "rank": 58,
       "speciesId": "seismitoad",
       "speciesName": "Seismitoad",
       "score": 88.3,
-      "moves": "Mud Shot / Earth Power / Icy Wind"
+      "moves": "Mud Shot / Earth Power / Icy Wind",
+      "r1Iv": "0/15/12",
+      "r1Level": 44.5,
+      "r1Cp": 2497
     },
     {
       "rank": 59,
       "speciesId": "annihilape",
       "speciesName": "Annihilape",
       "score": 88.2,
-      "moves": "Low Kick / Rage Fist / Ice Punch"
+      "moves": "Low Kick / Rage Fist / Ice Punch",
+      "r1Iv": "0/15/15",
+      "r1Level": 28.5,
+      "r1Cp": 2492
     },
     {
       "rank": 60,
       "speciesId": "miltank",
       "speciesName": "Miltank",
       "score": 88.2,
-      "moves": "Rollout / Body Slam / High Horsepower"
+      "moves": "Rollout / Body Slam / High Horsepower",
+      "r1Iv": "4/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2491
     },
     {
       "rank": 61,
       "speciesId": "togekiss",
       "speciesName": "Togekiss",
       "score": 88.2,
-      "moves": "Peck / Psyshock / Aura Sphere"
+      "moves": "Peck / Psyshock / Aura Sphere",
+      "r1Iv": "0/15/15",
+      "r1Level": 28.0,
+      "r1Cp": 2499
     },
     {
       "rank": 62,
       "speciesId": "malamar",
       "speciesName": "Malamar",
       "score": 88.1,
-      "moves": "Psywave / Super Power / Foul Play"
+      "moves": "Psywave / Super Power / Foul Play",
+      "r1Iv": "3/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2500
     },
     {
       "rank": 63,
       "speciesId": "toucannon_shadow",
       "speciesName": "Toucannon (Shadow)",
       "score": 88.1,
-      "moves": "Peck / Beak Blast / Drill Peck"
+      "moves": "Peck / Beak Blast / Drill Peck",
+      "r1Iv": "2/15/14",
+      "r1Level": 39.0,
+      "r1Cp": 2499
     },
     {
       "rank": 64,
       "speciesId": "ninetales_shadow",
       "speciesName": "Ninetales (Shadow)",
       "score": 88,
-      "moves": "Ember / Weather Ball Fire / Energy Ball"
+      "moves": "Ember / Weather Ball Fire / Energy Ball",
+      "r1Iv": "9/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2493
     },
     {
       "rank": 65,
       "speciesId": "samurott",
       "speciesName": "Samurott",
       "score": 88,
-      "moves": "Fury Cutter / Hydro Cannon / Megahorn"
+      "moves": "Fury Cutter / Hydro Cannon / Megahorn",
+      "r1Iv": "1/15/15",
+      "r1Level": 36.0,
+      "r1Cp": 2500
     },
     {
       "rank": 66,
       "speciesId": "kingdra",
       "speciesName": "Kingdra",
       "score": 87.9,
-      "moves": "Dragon Breath / Surf / Swift"
+      "moves": "Dragon Breath / Surf / Swift",
+      "r1Iv": "0/15/15",
+      "r1Level": 41.5,
+      "r1Cp": 2499
     },
     {
       "rank": 67,
       "speciesId": "gyarados_shadow",
       "speciesName": "Gyarados (Shadow)",
       "score": 87.8,
-      "moves": "Dragon Breath / Aqua Tail / Twister"
+      "moves": "Dragon Breath / Aqua Tail / Twister",
+      "r1Iv": "0/15/14",
+      "r1Level": 27.5,
+      "r1Cp": 2500
     },
     {
       "rank": 68,
       "speciesId": "muk_alolan_shadow",
       "speciesName": "Muk (Alolan) (Shadow)",
       "score": 87.8,
-      "moves": "Poison Jab / Brutal Swing / Ice Punch"
+      "moves": "Poison Jab / Brutal Swing / Ice Punch",
+      "r1Iv": "0/15/14",
+      "r1Level": 38.5,
+      "r1Cp": 2495
     },
     {
       "rank": 69,
       "speciesId": "golisopod",
       "speciesName": "Golisopod",
       "score": 87.7,
-      "moves": "Fury Cutter / X Scissor / Aqua Jet"
+      "moves": "Fury Cutter / X Scissor / Aqua Jet",
+      "r1Iv": "1/14/15",
+      "r1Level": 29.5,
+      "r1Cp": 2500
     },
     {
       "rank": 70,
       "speciesId": "turtonator",
       "speciesName": "Turtonator",
       "score": 87.7,
-      "moves": "Incinerate / Brutal Swing / Dragon Claw"
+      "moves": "Incinerate / Brutal Swing / Dragon Claw",
+      "r1Iv": "15/14/14",
+      "r1Level": 50.0,
+      "r1Cp": 2500
     },
     {
       "rank": 71,
       "speciesId": "milotic",
       "speciesName": "Milotic",
       "score": 87.6,
-      "moves": "Waterfall / Aqua Tail / Wrap"
+      "moves": "Waterfall / Aqua Tail / Wrap",
+      "r1Iv": "0/13/15",
+      "r1Level": 33.0,
+      "r1Cp": 2498
     },
     {
       "rank": 72,
       "speciesId": "bombirdier",
       "speciesName": "Bombirdier",
       "score": 87.5,
-      "moves": "Sucker Punch / Fly / Drill Run"
+      "moves": "Sucker Punch / Fly / Drill Run",
+      "r1Iv": "0/15/14",
+      "r1Level": 46.5,
+      "r1Cp": 2499
     },
     {
       "rank": 73,
       "speciesId": "kingdra_shadow",
       "speciesName": "Kingdra (Shadow)",
       "score": 87.5,
-      "moves": "Dragon Breath / Surf / Swift"
+      "moves": "Dragon Breath / Surf / Swift",
+      "r1Iv": "0/15/15",
+      "r1Level": 41.5,
+      "r1Cp": 2499
     },
     {
       "rank": 74,
       "speciesId": "annihilape_shadow",
       "speciesName": "Annihilape (Shadow)",
       "score": 87.4,
-      "moves": "Low Kick / Rage Fist / Ice Punch"
+      "moves": "Low Kick / Rage Fist / Ice Punch",
+      "r1Iv": "0/15/15",
+      "r1Level": 28.5,
+      "r1Cp": 2492
     },
     {
       "rank": 75,
       "speciesId": "gyarados",
       "speciesName": "Gyarados",
       "score": 87.4,
-      "moves": "Dragon Breath / Aqua Tail / Twister"
+      "moves": "Dragon Breath / Aqua Tail / Twister",
+      "r1Iv": "0/15/14",
+      "r1Level": 27.5,
+      "r1Cp": 2500
     },
     {
       "rank": 76,
       "speciesId": "oranguru",
       "speciesName": "Oranguru",
       "score": 87.4,
-      "moves": "Confusion / Brutal Swing / Trailblaze"
+      "moves": "Confusion / Brutal Swing / Trailblaze",
+      "r1Iv": "0/13/15",
+      "r1Level": 49.0,
+      "r1Cp": 2500
     },
     {
       "rank": 77,
       "speciesId": "oinkologne_female",
       "speciesName": "Oinkologne (Female)",
       "score": 87.3,
-      "moves": "Take Down / Body Slam / Trailblaze"
+      "moves": "Take Down / Body Slam / Trailblaze",
+      "r1Iv": "0/15/15",
+      "r1Level": 47.0,
+      "r1Cp": 2497
     },
     {
       "rank": 78,
       "speciesId": "cradily",
       "speciesName": "Cradily",
       "score": 87.2,
-      "moves": "Acid / Rock Tomb / Grass Knot"
+      "moves": "Acid / Rock Tomb / Grass Knot",
+      "r1Iv": "15/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2499
     },
     {
       "rank": 79,
       "speciesId": "articuno",
       "speciesName": "Articuno",
       "score": 87.1,
-      "moves": "Powder Snow / Icy Wind / Hurricane"
+      "moves": "Powder Snow / Icy Wind / Hurricane",
+      "r1Iv": "0/13/15",
+      "r1Level": 32.0,
+      "r1Cp": 2497
     },
     {
       "rank": 80,
       "speciesId": "orthworm",
       "speciesName": "Orthworm",
       "score": 87.1,
-      "moves": "Mud Slap / Iron Head / Rock Tomb"
+      "moves": "Mud Slap / Iron Head / Rock Tomb",
+      "r1Iv": "8/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2496
     },
     {
       "rank": 81,
       "speciesId": "piloswine_shadow",
       "speciesName": "Piloswine (Shadow)",
       "score": 87.1,
-      "moves": "Powder Snow / Icicle Spear / High Horsepower"
+      "moves": "Powder Snow / Icicle Spear / High Horsepower",
+      "r1Iv": "5/15/12",
+      "r1Level": 50.0,
+      "r1Cp": 2500
     },
     {
       "rank": 82,
       "speciesId": "aromatisse",
       "speciesName": "Aromatisse",
       "score": 87,
-      "moves": "Fairy Wind / Moonblast / Psyshock"
+      "moves": "Fairy Wind / Moonblast / Psyshock",
+      "r1Iv": "6/15/14",
+      "r1Level": 49.5,
+      "r1Cp": 2500
     },
     {
       "rank": 83,
       "speciesId": "tentacruel",
       "speciesName": "Tentacruel",
       "score": 87,
-      "moves": "Acid / Scald / Payback"
+      "moves": "Acid / Scald / Payback",
+      "r1Iv": "0/13/15",
+      "r1Level": 50.0,
+      "r1Cp": 2500
     },
     {
       "rank": 84,
       "speciesId": "blastoise_shadow",
       "speciesName": "Blastoise (Shadow)",
       "score": 86.9,
-      "moves": "Bite / Hydro Cannon / Skull Bash"
+      "moves": "Bite / Hydro Cannon / Skull Bash",
+      "r1Iv": "0/12/15",
+      "r1Level": 48.5,
+      "r1Cp": 2500
     },
     {
       "rank": 85,
       "speciesId": "cofagrigus",
       "speciesName": "Cofagrigus",
       "score": 86.9,
-      "moves": "Shadow Claw / Shadow Ball / Energy Ball"
+      "moves": "Shadow Claw / Shadow Ball / Energy Ball",
+      "r1Iv": "10/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2498
     },
     {
       "rank": 86,
       "speciesId": "politoed_shadow",
       "speciesName": "Politoed (Shadow)",
       "score": 86.8,
-      "moves": "Mud Shot / Weather Ball Water / Earthquake"
+      "moves": "Mud Shot / Weather Ball Water / Earthquake",
+      "r1Iv": "0/15/14",
+      "r1Level": 48.5,
+      "r1Cp": 2498
     },
     {
       "rank": 87,
       "speciesId": "tentacruel_shadow",
       "speciesName": "Tentacruel (Shadow)",
       "score": 86.8,
-      "moves": "Acid / Scald / Payback"
+      "moves": "Acid / Scald / Payback",
+      "r1Iv": "0/13/15",
+      "r1Level": 50.0,
+      "r1Cp": 2500
     },
     {
       "rank": 88,
       "speciesId": "genesect_shock",
       "speciesName": "Genesect (Shock)",
       "score": 86.7,
-      "moves": "Fury Cutter / Magnet Bomb / Techno Blast Shock"
+      "moves": "Fury Cutter / Magnet Bomb / Techno Blast Shock",
+      "r1Iv": "1/15/15",
+      "r1Level": 27.5,
+      "r1Cp": 2497
     },
     {
       "rank": 89,
       "speciesId": "swampert_shadow",
       "speciesName": "Swampert (Shadow)",
       "score": 86.7,
-      "moves": "Mud Shot / Hydro Cannon / Earthquake"
+      "moves": "Mud Shot / Hydro Cannon / Earthquake",
+      "r1Iv": "0/14/13",
+      "r1Level": 33.5,
+      "r1Cp": 2499
     },
     {
       "rank": 90,
       "speciesId": "drapion",
       "speciesName": "Drapion",
       "score": 86.6,
-      "moves": "Poison Sting / Crunch / Aqua Tail"
+      "moves": "Poison Sting / Crunch / Aqua Tail",
+      "r1Iv": "0/15/15",
+      "r1Level": 48.0,
+      "r1Cp": 2499
     },
     {
       "rank": 91,
       "speciesId": "hippowdon_shadow",
       "speciesName": "Hippowdon (Shadow)",
       "score": 86.6,
-      "moves": "Sand Attack / Weather Ball Rock / Earth Power"
+      "moves": "Sand Attack / Weather Ball Rock / Earth Power",
+      "r1Iv": "0/14/15",
+      "r1Level": 31.0,
+      "r1Cp": 2496
     },
     {
       "rank": 92,
       "speciesId": "piloswine",
       "speciesName": "Piloswine",
       "score": 86.5,
-      "moves": "Powder Snow / Icicle Spear / High Horsepower"
+      "moves": "Powder Snow / Icicle Spear / High Horsepower",
+      "r1Iv": "5/15/12",
+      "r1Level": 50.0,
+      "r1Cp": 2500
     },
     {
       "rank": 93,
       "speciesId": "raikou_shadow",
       "speciesName": "Raikou (Shadow)",
       "score": 86.5,
-      "moves": "Thunder Shock / Wild Charge / Aura Sphere"
+      "moves": "Thunder Shock / Wild Charge / Aura Sphere",
+      "r1Iv": "1/15/12",
+      "r1Level": 27.0,
+      "r1Cp": 2500
     },
     {
       "rank": 94,
       "speciesId": "cobalion",
       "speciesName": "Cobalion",
       "score": 86.4,
-      "moves": "Double Kick / Sacred Sword / Stone Edge"
+      "moves": "Double Kick / Sacred Sword / Stone Edge",
+      "r1Iv": "0/14/15",
+      "r1Level": 32.5,
+      "r1Cp": 2498
     },
     {
       "rank": 95,
       "speciesId": "doublade",
       "speciesName": "Doublade",
       "score": 86.4,
-      "moves": "Shadow Claw / Sacred Sword / Iron Head"
+      "moves": "Shadow Claw / Sacred Sword / Iron Head",
+      "r1Iv": "0/14/14",
+      "r1Level": 48.5,
+      "r1Cp": 2499
     },
     {
       "rank": 96,
       "speciesId": "hippowdon",
       "speciesName": "Hippowdon",
       "score": 86.4,
-      "moves": "Sand Attack / Weather Ball Rock / Earth Power"
+      "moves": "Sand Attack / Weather Ball Rock / Earth Power",
+      "r1Iv": "0/14/15",
+      "r1Level": 31.0,
+      "r1Cp": 2496
     },
     {
       "rank": 97,
       "speciesId": "zapdos",
       "speciesName": "Zapdos",
       "score": 86.4,
-      "moves": "Thunder Shock / Drill Peck / Thunderbolt"
+      "moves": "Thunder Shock / Drill Peck / Thunderbolt",
+      "r1Iv": "0/13/13",
+      "r1Level": 26.5,
+      "r1Cp": 2497
     },
     {
       "rank": 98,
       "speciesId": "gastrodon",
       "speciesName": "Gastrodon",
       "score": 86.3,
-      "moves": "Mud Slap / Body Slam / Earth Power"
+      "moves": "Mud Slap / Body Slam / Earth Power",
+      "r1Iv": "6/15/15",
+      "r1Level": 50.0,
+      "r1Cp": 2499
     },
     {
       "rank": 99,
       "speciesId": "samurott_shadow",
       "speciesName": "Samurott (Shadow)",
       "score": 86.3,
-      "moves": "Fury Cutter / Hydro Cannon / Megahorn"
+      "moves": "Fury Cutter / Hydro Cannon / Megahorn",
+      "r1Iv": "1/15/15",
+      "r1Level": 36.0,
+      "r1Cp": 2500
     },
     {
       "rank": 100,
       "speciesId": "lickilicky",
       "speciesName": "Lickilicky",
       "score": 86.1,
-      "moves": "Rollout / Body Slam / Shadow Ball"
+      "moves": "Rollout / Body Slam / Shadow Ball",
+      "r1Iv": "0/14/15",
+      "r1Level": 48.5,
+      "r1Cp": 2499
     }
   ]
 }
