@@ -4,7 +4,7 @@ PvPoke Open **Ultra League** overall top 100.
 
 Source: [PvPoke](https://pvpoke.com/rankings/all/2500/overall/)
 
-Auto-synced **2026-09-22 02:58** (UTC) via GitHub Action.
+Auto-synced **2026-09-22 03:02** (UTC) via GitHub Action.
 
 Scores and moves from PvPoke overall rankings (best movesets).
 
