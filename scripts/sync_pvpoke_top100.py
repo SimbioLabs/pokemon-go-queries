@@ -313,6 +313,11 @@ def should_plus(gm_by_id: dict, root_id: str) -> bool:
 
 
 def search_token(gm_by_id: dict, ranking_sid: str) -> str:
+    # GO search uses hyphens (e.g. jangmo-o); gamemaster ids use underscores.
+    return _search_token_raw(gm_by_id, ranking_sid).replace("_", "-")
+
+
+def _search_token_raw(gm_by_id: dict, ranking_sid: str) -> str:
     raw = strip_shadow(ranking_sid)
     if raw in TOKEN_OVERRIDES:
         return TOKEN_OVERRIDES[raw]
